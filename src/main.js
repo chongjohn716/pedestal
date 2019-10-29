@@ -7,6 +7,8 @@ import router from './router'
 import store from './store'
 import ElementUI from 'element-ui'
 
+window.Vue = Vue
+
 Vue.use(ElementUI, {
   size: 'small'
 })

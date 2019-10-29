@@ -1,0 +1,29 @@
+{
+	"Vue base template": {
+		"prefix": "vtpl",
+		"body": [
+			"<template>",
+			"<div class=\"$1\"></div>",
+			"</template>",
+			"",
+			"<script>",
+			"export default {",
+			"  name: '$1',",
+			"",
+			"  data() {",
+			"    return {",
+			"    }",
+			"  }",
+			"}",
+			"</script>",
+			"",
+			"<!-- Add \"scoped\" attribute to limit CSS to this component only -->",
+			"<style lang=\"less\" scoped>",
+			".$1 {",
+			"}",
+			"</style>",
+			""
+		],
+		"description": "Create vue basic code"
+	}
+}
