@@ -1,14 +1,14 @@
 [
   {
     "id": "app-1",
-    "name": "App1",
+    "name": "app1",
     "path": "app1",
     "url": "/app1/index.js"
   },
   {
     "id": "app-2",
-    "name": "App2",
+    "name": "app2",
     "path": "app2",
-    "url": "/app2/index.js"
+    "url": "app2"
   }
 ]

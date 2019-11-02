@@ -36,6 +36,5 @@ export default {
 
 <style lang="less" scoped>
 .dep-app-list {
-  margin: 100px 200px;
 }
 </style>

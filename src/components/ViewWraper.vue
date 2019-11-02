@@ -32,5 +32,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 .dep-view-wraper {
+  height: 100%;
+}
+.dep-view-content {
+  height: calc(100% - 50px);
+  overflow: auto;
 }
 </style>

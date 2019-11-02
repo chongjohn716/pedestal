@@ -14,8 +14,8 @@ export function hashPrefix (prefix) {
 function loadApp (app, el) {
   registerApplication(app.name, () => {
     return System.import(app.url).then(app => {
-      debugger
-      return app.default
+      // debugger
+      return app.default || app
     })
   }, hashPrefix(app.path), {
     domElement: el
@@ -23,7 +23,6 @@ function loadApp (app, el) {
 }
 
 export function registerApplications (appList, el) {
-  console.log('system', System)
   appList.map(app => {
     loadApp(app, el)
   })

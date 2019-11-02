@@ -6,6 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <meta name="importmap-type" content="systemjs-importmap">
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "app2": "http://localhost:8082/app.js",
+        "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js",
+        "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.0.7/dist/vue-router.min.js"
+      }
+    }
+  </script>
   <title>adh</title>
 </head>
 
@@ -13,8 +23,22 @@
   <noscript>
     <strong>We're sorry but adh doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
   </noscript>
-  <div id="app"></div>
+  <div id="dep-root"></div>
   <script src="/libs/systemjs/system.js"></script>
+  <script src="/libs/systemjs/extras/amd.min.js"></script>
+  <script src="/libs/systemjs/extras/named-exports.js"></script>
+  <script src="/libs/systemjs/extras/named-register.min.js"></script>
+  <script src="/libs/systemjs/extras/use-default.min.js"></script>
+  <script>
+    (function () {
+      Promise.all([System.import('vue'), System.import('vue-router')]).then(function (modules) {
+        var Vue = modules[0];
+        var VueRouter = modules[1];
+
+        Vue.use(VueRouter)
+      })
+    })()
+  </script>
   <!-- built files will be auto injected -->
 </body>
 

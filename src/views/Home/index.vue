@@ -19,6 +19,10 @@ export default {
 
 <style lang="less" scoped>
 .dep-home {
-  background-color: #e7e7e7;
+  background-color: #ffffff;
+
+  /deep/ .dep-view-content {
+    padding: 100px 200px;
+  }
 }
 </style>

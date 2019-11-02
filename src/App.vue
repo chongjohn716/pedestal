@@ -1,11 +1,17 @@
 <template>
-  <div id="app">
+  <div id="dep-root">
     <router-view />
   </div>
 </template>
 
 <style lang="less">
-#app {
+html,
+body,
+#dep-root {
+  height: 100%;
+}
+
+#dep-root {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
